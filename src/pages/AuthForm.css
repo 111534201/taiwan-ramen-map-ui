@@ -1,0 +1,120 @@
+/* src/pages/AuthForm.css */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 讓表單從頂部開始 */
+    min-height: calc(100vh - 120px); /* 視口高度減去可能的 header/footer 高度 */
+    padding-top: 4rem; /* 距離頂部一些空間 */
+    background-color: #f4f4f4; /* 淡灰色背景 */
+}
+
+.auth-form-wrapper {
+    background-color: #fff;
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* 限制最大寬度 */
+    text-align: center;
+}
+
+.auth-form-wrapper h2 {
+    margin-bottom: 1.8rem;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form textarea { /* 為註冊表單預留 */
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* 確保 padding 不會撐大寬度 */
+    transition: border-color 0.2s ease;
+}
+
+.auth-form input:focus,
+.auth-form textarea:focus {
+    outline: none;
+    border-color: #ff6347; /* 例如：番茄紅的焦點顏色 */
+    box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.2);
+}
+
+.auth-form .error-message {
+    background-color: #ffebee; /* 淺紅色背景 */
+    color: #c62828;      /* 深紅色文字 */
+    padding: 0.8rem 1rem;
+    border: 1px solid #e57373; /* 紅色邊框 */
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.auth-form .submit-button {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background-color: #ff6347; /* 主要按鈕顏色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem; /* 與最後一個輸入框的間距 */
+}
+
+.auth-form .submit-button:hover:not(:disabled) {
+    background-color: #e55337; /* 滑過時加深顏色 */
+}
+
+.auth-form .submit-button:disabled {
+    background-color: #ffab91; /* 禁用時的顏色 */
+    cursor: not-allowed;
+}
+
+.auth-switch {
+    margin-top: 1.8rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-switch a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* 可以添加響應式設計 */
+@media (max-width: 500px) {
+    .auth-form-wrapper {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+    }
+    .auth-form-wrapper h2 {
+        font-size: 1.6rem;
+    }
+}

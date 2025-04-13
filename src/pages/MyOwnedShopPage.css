@@ -1,0 +1,62 @@
+/* src/pages/MyOwnedShopPage.css */
+
+.my-owned-shop-page {
+    max-width: 1100px; /* 比詳情頁窄一點？或者一樣寬 */
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  
+  /* 可以復用 .page-header, 但按鈕樣式可能不同 */
+  .my-owned-shop-page .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+  }
+  .my-owned-shop-page .page-header h1 {
+      margin-bottom: 0; /* 移除標題下邊距 */
+      text-align: left; /* 左對齊 */
+  }
+  
+  /* 主操作按鈕樣式 */
+  .main-action-button {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      text-decoration: none; /* 如果是 Link */
+      display: inline-block;
+  }
+  .edit-shop-button.main-action-button {
+       background-color: #1976d2; /* 藍色 */
+       color: white;
+       border: 1px solid #1976d2;
+  }
+   .edit-shop-button.main-action-button:hover {
+        background-color: #1565c0;
+        border-color: #1565c0;
+   }
+  
+  
+  /* 可以復用 .shop-content-grid, .shop-info, .shop-map, .review-section, .review-list 等樣式 */
+  /* 可以為店家回覆的 AddReviewForm 添加特定樣式 */
+  .shop-owner-reviews .add-review-form-container.reply-mode {
+      border-left-color: #ff6347; /* 使用主題色標示店家回覆 */
+      margin-top: 1.5rem; /* 與上方評論卡間距 */
+  }
+  
+  /* 店家本人無法評論的提示 */
+  .owner-prompt {
+      background-color: #fff9c4; /* 淡黃色背景 */
+      border: 1px solid #fff59d;
+      color: #795548; /* 棕色文字 */
+      padding: 0.8rem 1rem;
+      border-radius: 4px;
+      margin: 1rem 0 1.5rem 0;
+      font-size: 0.9rem;
+      text-align: center;
+  }

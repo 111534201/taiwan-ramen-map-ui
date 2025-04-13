@@ -1,0 +1,105 @@
+/* src/pages/HomePage.css */
+
+.homepage {
+  position: relative; /* 為了讓絕對定位的元素相對此容器 */
+  width: 100%;
+  /* 高度通常由 GoogleMap 組件的 containerStyle 控制 */
+   height: calc(100vh - 60px); /* 示例：佔滿減去 Navbar 的剩餘高度 */
+   overflow: hidden; /* 防止內容溢出 */
+}
+
+/* 地圖搜索框容器 */
+.map-search-container {
+  position: absolute;
+  top: 80px; /* 距離頂部 (Navbar 下方) */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px; /* 限制最大寬度 */
+  z-index: 5; /* 確保在 地圖 之上 */
+  background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.map-search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.map-search-input:focus {
+    outline: none;
+    border-color: #ff8a65;
+    box-shadow: 0 0 0 2px rgba(255, 138, 101, 0.2);
+}
+
+/* 加載和錯誤提示覆蓋層 (可選) */
+.loading-overlay, .error-overlay {
+  position: absolute;
+  bottom: 20px; /* 顯示在底部 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  z-index: 6; /* 比搜索框更高 */
+  font-size: 0.9rem;
+}
+.error-overlay {
+  background-color: rgba(220, 53, 69, 0.8); /* 紅色背景 */
+}
+
+
+/* InfoWindow 內容樣式 */
+.info-window-content {
+  padding: 5px; /* 稍微留白 */
+  max-width: 250px; /* 限制最大寬度 */
+}
+.info-window-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.info-window-content p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+.info-window-rating {
+    font-size: 0.85rem;
+    color: #777;
+}
+.info-window-link {
+  display: inline-block; /* 或 block */
+  margin-top: 0.8rem;
+  color: #ff6347;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.info-window-link:hover {
+  text-decoration: underline;
+}
+
+
+/* 地圖加載中的提示 */
+.loading-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 佔滿父容器 */
+    font-size: 1.2rem;
+    color: #666;
+    background-color: #f8f8f8;
+}
+.error-message {
+    color: #dc3545;
+    line-height: 1.6;
+}
